@@ -6,6 +6,7 @@
     margin: 0 7px;
     position: relative;
     text-align: center;
+    user-select: none;
 }
 .letter::after{
     content: " ";
