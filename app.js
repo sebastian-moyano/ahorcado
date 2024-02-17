@@ -182,3 +182,19 @@ const startGame =()=>{
 start.addEventListener("click", startGame)
 agregar.addEventListener("click", agregarPalabras)
 
+// Obtener todos los botones del teclado
+const keyboardButtons = document.querySelectorAll(".keyboard-key");
+
+// Función para manejar el evento de clic en un botón del teclado
+const handleKeyboardButtonClick = (event) => {
+    // Obtener la letra asociada al botón del teclado
+    const letter = event.target.textContent;
+
+    // Llamar a la función letterInput para manejar la entrada de la letra
+    letterImput(letter);
+};
+
+// Agregar un event listener a cada botón del teclado
+keyboardButtons.forEach(button => {
+    button.addEventListener("click", handleKeyboardButtonClick);
+});

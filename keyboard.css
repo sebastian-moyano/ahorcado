@@ -1,0 +1,32 @@
+#keyboard-container {
+    display: none;
+    justify-content: center; /* Centrar los botones horizontalmente */
+    align-items: center; /* Centrar los botones verticalmente */
+    flex-wrap: wrap; /* Permitir que los botones se envuelvan en pantallas más pequeñas */
+    max-width: 80%; /* Limitar el ancho del contenedor para que no se extienda demasiado */
+    margin: 20px auto; /* Añadir un margen superior e inferior y centrar horizontalmente */
+}
+
+@media screen and (max-width: 900px) {
+    #keyboard-container {
+        display: flex; /* Mostrar el teclado como una fila en pantallas más pequeñas */
+        justify-content: center; /* Centrar los botones del teclado */
+        margin-top: 40px; /* Ajustar el margen superior */
+    }
+}
+
+
+
+.keyboard-key {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc; /* Color de fondo de los botones */
+    margin: 5px; /* Espacio entre los botones */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.keyboard-key:hover {
+    background-color: #aaa; /* Cambiar el color de fondo al pasar el cursor sobre los botones */
+}
