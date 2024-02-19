@@ -181,7 +181,7 @@ const startGame =()=>{
 }
 start.addEventListener("click", startGame)
 agregar.addEventListener("click", agregarPalabras)
-
+/*
 // Obtener todos los botones del teclado
 const keyboardButtons = document.querySelectorAll(".keyboard-key");
 
@@ -198,3 +198,16 @@ const handleKeyboardButtonClick = (event) => {
 keyboardButtons.forEach(button => {
     button.addEventListener("click", handleKeyboardButtonClick);
 });
+*/
+const toggleTeclado = () => {
+    const teclado = document.getElementById("teclado");
+    if (window.innerWidth < 1000) {
+        teclado.style.display = "block";
+        document.getElementById("campoTexto").focus(); // Enfocar el campo de texto
+    } else {
+        teclado.style.display = "none";
+    }
+};
+
+window.addEventListener("load", toggleTeclado);
+window.addEventListener("resize", toggleTeclado);
